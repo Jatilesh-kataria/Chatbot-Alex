@@ -1,0 +1,101 @@
+#chatbot Alex
+print("Alex: Hello! I am Alex Your Chatbot.")
+print("Alex: I can answer your Questions and Clear Your Doubts.")
+print("Alex: I can answer your Questions of arithmetic Operations in float.")
+print("Alex: To Exit this Chat just type 'bye','quit','exit'.")
+
+while True:
+    user = input("Me: ").lower().strip() #to  make input in lower and strip remove unneceseary space
+
+    #basic talk
+    if user=="hello" or user=="hi":
+        print("Alex: Hello! Nice to meet You")
+    elif "your name" in user:
+        print("Alex: Hello! I am Alex Your Chatbot How Can I Assist You?")
+    elif "how are you" in user:
+        print("Alex: I am doing Great! Thanks For asking.")
+    elif "help" in user:
+        print("Alex: I can Answer Your simple Questions.")
+    elif "who created you" in user:
+        print("Alex: I was Created By AI Student.")
+    elif "what can you do" in user:
+        print("Alex: I can do calculations and answer your Questions related Education,Technology Information,Study Tips,Career,Arithmetic operations for you.")
+    elif "time" in user:
+        print("Alex: Sorry I was Unable to Tell You the Time.")
+    elif "your favourite colour" in user:
+        print("Alex: My Favourite Colour is Blue.")
+
+    #Education
+    elif "machine learning" in user:
+        print("Alex: Machine learning allows systems to learn from data.")
+    elif "artificial intelligence" in user:
+        print("Alex: Artificial intelligence enables machines to think and act like humans.")
+    elif "programming language" in user:
+        print("Alex: A programming language is used to give instructions to a computer.")
+    elif "data science" in user:
+        print("Alex: Data science focuses on analyzing and interpreting data.")
+    
+    #Technology information
+    elif "internet" in user:
+        print("Alex: The internet connects computers across the world.")
+    elif "software" in user:
+        print("Alex: Software is a set of instructions that tells a computer what to do.")
+    elif "hardware" in user:
+        print("Alex: Hardware refers to the physical components of a computer.")
+
+    #Study Tips
+    elif "study tips" in user:
+        print("Alex: Studying regularly and revising notes improves understanding.")
+    elif "time management" in user:
+        print("Alex: Managing time helps balance studies and personal activities.")
+    elif "exams" in user:
+        print("Alex: Preparing early and practicing questions helps in exams.")
+    
+    #Career
+    elif "career options" in user:
+        print("Alex: Careers in technology include development, analysis, and testing.")
+    elif "software engineer" in user:
+        print("Alex: A software engineer designs and develops applications.")
+    elif "internship" in user:
+        print("Alex: Internships provide practical industry experience.")
+    
+    #Arithmetic operations
+    elif "add" in user: #addition
+        try:
+            num1=float(input("Enter First Number: "))
+            num2=float(input("Enter Second Number: "))
+            print("Alex: The sum is",num1+num2)
+        except ValueError:
+            print("Alex: Invalid input! Please enter numbers only.")
+    elif "subtract" in user: #subtract
+        try:
+            num1=float(input("Enter First Number: "))
+            num2=float(input("Enter Second Number: "))
+            print("Alex: The difference is",num1-num2)
+        except ValueError:
+            print("Alex: Invalid input! Please enter numbers only.")
+    elif "multiply" in user: #multiply
+        try:
+            num1=float(input("Enter First Number: "))
+            num2=float(input("Enter Second Number: "))
+            print("Alex: The Multiplication is",num1*num2)
+        except ValueError:
+            print("Alex: Invalid input! Please enter numbers only.")
+    elif "divide" in user: #divide
+        try:
+            num1=float(input("Enter First Number: "))
+            num2=float(input("Enter Second Number: "))
+            if num2!=0:
+                print("Alex: The division is",num1/num2)
+            else:
+                print("Alex: Division by Zero is not allowed.")
+        except ValueError:
+            print("Alex: Invalid input! Please enter numbers only.")
+
+    #Exit
+    elif user=="bye" or user=="quit" or user=="exit":#For Exit
+        print("Alex: Goodbye! See You soon.")
+        break
+    #when the input is unknown
+    else:
+        print("Alex: Sorry I didn't understand that.")
